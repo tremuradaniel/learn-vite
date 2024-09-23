@@ -8,6 +8,8 @@ import { resolve } from "path";
 export default defineConfig({
       plugins: [react()],
       build: {
+        // build for modern browsers that support newer features
+        target: "esnext",
         rollupOptions: {
           input: {
             // for npm run build
