@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from "path";
+import postCssNesting from "postcss-nesting";
 
 // https://vitejs.dev/config/
 // ctrl + space in vsc for hints!
@@ -16,6 +17,13 @@ export default defineConfig({
             main: resolve(__dirname, 'index.html'),
             another: resolve(__dirname, 'another-route/index.html')
           }
+        }
+      },
+      css: {
+        postcss: {
+          plugins: [
+            postCssNesting()
+          ]
         }
       }
 })

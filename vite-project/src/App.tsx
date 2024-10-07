@@ -1,18 +1,19 @@
 import './App.css'
-import moduleOne from './one.module.css';
-import moduleTwo from './two.module.css';
-
-const modules = import.meta.glob<{default: string}>(`./png-images/*.png`, { eager: true });
+import './nested.css'
 
 function App() {
   return (
-    <>
-      <div>
-        {Object.values(modules).map(src => <img src={src.default} />)}
-      </div>
-      <h1 className={moduleOne.another}>Vite + React</h1>
-      <a href="/another-route/">Another route</a>
-    </>
+    <div className="App">
+      <ul className='styled-list'>
+        <li className="item">Item 1</li>
+        <li className="item">Item 2</li>
+        <li className="item">Item 3</li>
+      </ul>
+
+      <p className="item">
+        This is NOT styled.
+      </p>
+    </div>
   )
 }
 
