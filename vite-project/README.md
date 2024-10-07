@@ -65,3 +65,24 @@ This plugin provides type information to IDEs and any other tools that work with
 In order for this to work, needs the TS version selected to be the one of the workspace.
 
 ![alt text](/documentation/auxiliary/typescript-plugin-css-modules2.png)
+
+# Building for production
+
+`npm run build`
+
+`npm run preview` - runs a preview using files in dist (no hot autoloading)
+
+Separate vendor libraries in their own JS bundle.
+
+main in dist contains application code an the entire react library
+![alt text](/documentation/auxiliary/build-for-production.png)
+
+In order to avoid building all the libraries each time we only make a change to our code, we can use Vite to separate our code build from the vendors' build.
+
+This can be done using `manualChunks` with the separation result:
+
+![alt text](/documentation/auxiliary/build-for-production2.png)
+
+Making now changes in our code will lead to a different hash when building again, while the vendor hash remains the same.
+
+![alt text](/documentation/auxiliary/build-for-production3.png)

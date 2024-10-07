@@ -8,6 +8,7 @@ function App() {
         <li className="item">Item 1</li>
         <li className="item">Item 2</li>
         <li className="item">Item 3</li>
+        <li className="item">Item 4</li>
       </ul>
 
       <p className="item">

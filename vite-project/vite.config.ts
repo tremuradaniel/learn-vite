@@ -16,6 +16,13 @@ export default defineConfig({
             // for npm run build
             main: resolve(__dirname, 'index.html'),
             another: resolve(__dirname, 'another-route/index.html')
+          },
+          output: {
+            manualChunks(id) {
+              if (id.includes('node_modules')) {
+                return 'vendor'; // create a separate chunk for vendors
+              }
+            }
           }
         }
       },
