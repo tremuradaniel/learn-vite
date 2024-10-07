@@ -56,3 +56,12 @@ export default tseslint.config({
 })
 ```
 
+# typescript-plugin-css-modules
+
+This plugin provides type information to IDEs and any other tools that work with TypeScript language service plugins.
+
+![alt text](/documentation/auxiliary/typescript-plugin-css-modules.png)
+
+In order for this to work, needs the TS version selected to be the one of the workspace.
+
+![alt text](/documentation/auxiliary/typescript-plugin-css-modules2.png)

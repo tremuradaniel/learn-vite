@@ -1,4 +1,6 @@
 import './App.css'
+import moduleOne from './one.module.css';
+import moduleTwo from './two.module.css';
 
 const modules = import.meta.glob<{default: string}>(`./png-images/*.png`, { eager: true });
 
@@ -8,7 +10,7 @@ function App() {
       <div>
         {Object.values(modules).map(src => <img src={src.default} />)}
       </div>
-      <h1>Vite + React</h1>
+      <h1 className={moduleTwo.highlight}>Vite + React</h1>
       <a href="/another-route/">Another route</a>
     </>
   )
