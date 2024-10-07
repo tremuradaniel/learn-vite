@@ -2,12 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from "path";
 import postCssNesting from "postcss-nesting";
+import myPlugin from './plugins/my-plugin';
 
 // https://vitejs.dev/config/
 // ctrl + space in vsc for hints!
 // can support async calls
 export default defineConfig({
-      plugins: [react()],
+      plugins: [react(), myPlugin()],
       build: {
         // build for modern browsers that support newer features
         target: "esnext",
