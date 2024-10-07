@@ -3,5 +3,5 @@
 }
 
 .another {
-    
+    color: var(--my-variable);
 }

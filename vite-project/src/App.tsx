@@ -10,7 +10,7 @@ function App() {
       <div>
         {Object.values(modules).map(src => <img src={src.default} />)}
       </div>
-      <h1 className={moduleTwo.highlight}>Vite + React</h1>
+      <h1 className={moduleOne.another}>Vite + React</h1>
       <a href="/another-route/">Another route</a>
     </>
   )
